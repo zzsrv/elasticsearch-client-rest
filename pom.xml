@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cc.vcode.elasticsearch.client</groupId>
-    <artifactId>rest</artifactId>
+    <artifactId>elasticsearch-client-rest</artifactId>
     <version>1.0</version>
     <name>rest Maven App</name>
     <url>http://maven.apache.org</url>

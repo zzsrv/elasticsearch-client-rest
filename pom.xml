@@ -6,7 +6,7 @@
     <groupId>cc.vcode.elasticsearch.client</groupId>
     <artifactId>elasticsearch-client-rest</artifactId>
     <version>1.0</version>
-    <name>rest Maven App</name>
+    <name>elasticsearch-client-rest Maven App</name>
     <url>http://maven.apache.org</url>
     <build>
         <finalName>elasticsearch-client-rest</finalName>
@@ -21,6 +21,40 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <!--将所有依赖的jar包复制到执行的目录中-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/dependency</outputDirectory>
+                            <includeScope>system</includeScope>
+                            <includeScope>compile</includeScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--将所有依赖的jar包复制到elasticsearch-client-rest.jar包中-->
+            <!-- <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-shade-plugin</artifactId>
+                 <version>3.1.0</version>
+                 <executions>
+                     <execution>
+                         <phase>package</phase>
+                         <goals>
+                             <goal>shade</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+             </plugin>-->
         </plugins>
     </build>
 

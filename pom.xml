@@ -9,7 +9,7 @@
     <name>rest Maven App</name>
     <url>http://maven.apache.org</url>
     <build>
-        <finalName>rest</finalName>
+        <finalName>elasticsearch-client-rest</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -32,6 +32,11 @@
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore-nio</artifactId>
             <version>4.4.6</version>
         </dependency>
@@ -43,7 +48,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.36</version>
+            <version>1.2.37</version>
         </dependency>
         <dependency>
             <groupId>commons-lang</groupId>
